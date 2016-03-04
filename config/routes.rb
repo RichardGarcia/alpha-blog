@@ -7,6 +7,8 @@ get 'about', to: 'pages#about'
 # get 'pages/home', to: 'pages#home'
 # get 'pages/about', to: 'pages#about'
 
+# will give new articles paths / routes
+resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
