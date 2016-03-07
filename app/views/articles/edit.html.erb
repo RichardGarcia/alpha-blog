@@ -1,5 +1,4 @@
-<!-- this is new article page -->
-<h2>create an article</h2>
+<h2>Edit existing article</h2>
 
 <% if @article.errors.any? %>
   <h3>The following errors prevented the article from getting created</h3>
@@ -17,5 +16,5 @@
     <%= f.text_field :title %><br>
     <%= f.label :description, 'this is the description label' %><br>
     <%= f.text_area :description %><br>
-    <%= f.submit 'submit this!' %>
+    <%= f.submit %>
 <% end %>
