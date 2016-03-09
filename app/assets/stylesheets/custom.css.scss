@@ -1,2 +1,40 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-image: asset-url('ror.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70%;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-left: 15px;
+}
+
+// floats
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
