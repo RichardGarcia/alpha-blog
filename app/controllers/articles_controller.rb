@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
 
   def index
-    @articles = Article.all
+    # @articles = Article.all
+    @articles = Article.order(created_at: :desc) # descending order
   end
 
   def new
@@ -16,7 +17,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = User.first # to grab a USER to the create action to temporarily hardcode a user to articles
     if @article.save
       flash[:success] = "Article was succesfully created"
       redirect_to article_path(@article)
