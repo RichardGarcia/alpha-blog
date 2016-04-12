@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   def index
     # @articles = Article.all
     # @articles = Article.order(created_at: :desc) # descending order
-    @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
+    @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -21,7 +21,8 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.user = User.first # to grab a USER to the create action to temporarily hardcode a user to articles
+    # @article.user = User.first # to grab a USER to the create action to temporarily hardcode a user to articles
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article was succesfully created"
       redirect_to article_path(@article)
