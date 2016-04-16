@@ -15,3 +15,11 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+// flash messages auto-hide
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').slideUp("slow");
+  }, 3000);
+});

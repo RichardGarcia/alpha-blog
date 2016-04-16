@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
 
   has_secure_password
-  
+
   # association
-  has_many :articles
+  has_many :articles, dependent: :destroy
 
   # regex for email
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
