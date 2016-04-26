@@ -1,6 +1,8 @@
 class Article < ActiveRecord::Base
   # association
   belongs_to :user
+  has_many :article_categories
+  has_many :categories, through: :article_categories
 
   # validations
   # to prevent blank or null
