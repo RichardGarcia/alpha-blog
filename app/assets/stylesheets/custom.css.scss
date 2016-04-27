@@ -44,29 +44,34 @@
   margin: 0 2px;
 }
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+.categoryAction {
+  margin: 10px 0;
 }
 
-footer a:hover {
-  color: #222;
+.input_checkbox input {
+  width: auto !important;
 }
 
-footer ul {
-  list-style: none;
+label.checkbox-inline {
+  line-height: 12px;
 }
 
-footer ul li {
-  margin-left: 15px;
-}
-
-// floats
-.floatLeft {
-  float: left;
-}
-.floatRight {
-  float: right;
-}
+//
+// footer {
+//   margin-top: 45px;
+//   padding-top: 5px;
+//   border-top: 1px solid #eaeaea;
+//   color: #777;
+// }
+//
+// footer a:hover {
+//   color: #222;
+// }
+//
+// footer ul {
+//   list-style: none;
+// }
+//
+// footer ul li {
+//   margin-left: 15px;
+// }
